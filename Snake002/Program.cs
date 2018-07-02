@@ -11,12 +11,6 @@ namespace Snake002
     {
         static void Main(string[] args)
         {
-            var p1 = new Point(1, 3, '*');
-            p1.Draw();
-
-            var p2 = new Point(4, 6, '#');
-            p2.Draw();
-
             Console.SetBufferSize(80, 25);
 
             HorizontallLine upLine = new HorizontallLine(0,78,0,'+');
@@ -28,8 +22,9 @@ namespace Snake002
             leftLine.Draw();
             rightLine.Draw();
 
-            var line = new HorizontallLine(5, 10, 8, '+');
-            line.Draw();
+            Point p = new Point(4,5,'*');
+            Snake snake = new Snake(p, 4, Direction.RIGTH);
+            snake.Draw();
 
             Console.ReadLine();
         }
